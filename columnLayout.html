@@ -26,24 +26,34 @@
     .sidebar ul {
       list-style: none;
       padding: 0;
+      margin: 0;
     }
 
     .sidebar li {
       margin-bottom: 15px;
     }
 
-    .sidebar a {
+    .sidebar a,
+    .back-btn {
       text-decoration: none;
       color: #333;
       font-weight: bold;
       display: block;
-      padding: 8px;
+      padding: 10px;
       border-radius: 5px;
       cursor: pointer;
     }
 
-    .sidebar a:hover {
+    .sidebar a:hover,
+    .back-btn:hover {
       background-color: #e0e0e0;
+    }
+
+    .back-btn {
+      background: none;
+      border: none;
+      text-align: left;
+      width: 100%;
     }
 
     /* Content (right) */
@@ -68,6 +78,7 @@
     <!-- Left column -->
     <nav class="sidebar">
       <ul>
+        <li><button class="back-btn" onclick="window.location.href='index.html'">⬅ Back</button></li>
         <li><a onclick="showContent('profile')">👤 Main Profile</a></li>
         <li><a onclick="showContent('hobbies')">🎨 Hobbies & Interests</a></li>
         <li><a onclick="showContent('contact')">📞 Contact Info</a></li>
@@ -76,7 +87,7 @@
 
     <!-- Right column -->
     <main class="content" id="mainContent">
-      <!-- Will be filled by JS -->
+      <!-- Filled by JS -->
     </main>
   </div>
 
@@ -88,12 +99,12 @@
         content.innerHTML = `
           <h1>Main Profile</h1>
           <p>Hello!</p>
-          <p>Quick overview</p>
+          <p>Quick overview...</p>
         `;
       } else if (section === "hobbies") {
         content.innerHTML = `
           <h1>Hobbies & Interests</h1>
-          <p>I enjoy a variety of activities in my free time such as playing chess, watching, and exploring new technologies.</p>
+          <p>I enjoy a variety of activities in my free time such as playing chess, watching movies/series, and exploring new technologies.</p>
           <p>These hobbies help me relax, learn, and stay creative.</p>
         `;
       } else if (section === "contact") {
@@ -108,7 +119,7 @@
       }
     }
 
-    // 🔹 Show "Main Profile" by default when page loads
+    // Default view
     window.onload = function() {
       showContent('profile');
     };
