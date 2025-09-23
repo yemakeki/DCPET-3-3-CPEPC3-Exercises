@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two-Column Profile Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Sidebar (left) */
+    .sidebar {
+      width: 220px;
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-right: 1px solid #ddd;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      display: block;
+      padding: 8px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .sidebar a:hover {
+      background-color: #e0e0e0;
+    }
+
+    /* Content (right) */
+    .content {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .content h1 {
+      margin-bottom: 15px;
+      color: #222;
+    }
+
+    .content p {
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Left column -->
+    <nav class="sidebar">
+      <ul>
+        <li><a onclick="showContent('profile')">👤 Main Profile</a></li>
+        <li><a onclick="showContent('hobbies')">🎨 Hobbies & Interests</a></li>
+        <li><a onclick="showContent('contact')">📞 Contact Info</a></li>
+      </ul>
+    </nav>
+
+    <!-- Right column -->
+    <main class="content" id="mainContent">
+      <!-- Will be filled by JS -->
+    </main>
+  </div>
+
+  <script>
+    function showContent(section) {
+      const content = document.getElementById("mainContent");
+
+      if (section === "profile") {
+        content.innerHTML = `
+          <h1>Main Profile</h1>
+          <p>Hello!</p>
+          <p>Quick overview</p>
+        `;
+      } else if (section === "hobbies") {
+        content.innerHTML = `
+          <h1>Hobbies & Interests</h1>
+          <p>I enjoy a variety of activities in my free time such as playing chess, watching, and exploring new technologies.</p>
+          <p>These hobbies help me relax, learn, and stay creative.</p>
+        `;
+      } else if (section === "contact") {
+        content.innerHTML = `
+          <h1>Contact Info</h1>
+          <p>You can reach me through the following:</p>
+          <ul>
+            <li>Email: example@email.com</li>
+            <li>Phone: +123 456 7890</li>
+          </ul>
+        `;
+      }
+    }
+
+    // 🔹 Show "Main Profile" by default when page loads
+    window.onload = function() {
+      showContent('profile');
+    };
+  </script>
+</body>
+</html>
