@@ -4,70 +4,134 @@
   <meta charset="UTF-8">
   <title>Personal Profiles</title>
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(to bottom, #66a3ff, #b3d9ff, #ffffff);
-      background-attachment: fixed;
-    }
+/* ---------- Import Google Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap');
 
-    header {
-      text-align: center;
-      padding: 20px;
+/* ---------- Global Styles ---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(to bottom, #66a3ff, #b3d9ff, #ffffff);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ---------- Header ---------- */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(0, 102, 204, 0.85);
+    color: #fff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif; /* Bold, modern title font */
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+header h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+/* ---------- Profiles Container using Flexbox ---------- */
+.profiles {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    gap: 30px; 
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ---------- Individual Profile Cards ---------- */
+.profile {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 25px 20px;
+    text-align: center;
+    width: 250px; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.profile h3 {
+    font-family: 'Montserrat', sans-serif; /* Bold and modern for names */
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: #004080;
+}
+
+.profile h4 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1em;
+    margin: 15px 0 10px;
+    color: #004080;
+}
+
+/* ---------- Lists ---------- */
+ul {
+    text-align: left;
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+/* ---------- Links ---------- */
+a {
+    color: #1e90ff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #004080;
+    text-decoration: underline;
+}
+
+/* ---------- Responsive Adjustments ---------- */
+@media screen and (max-width: 1100px) {
+    .profiles {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .profiles {
+        flex-direction: column; 
+        align-items: center;
     }
 
     header h1 {
-      font-size: 2.5em;
-      font-weight: bold;
-      margin: 0;
+        font-size: 2em;
     }
 
     header h2 {
-      margin-top: 10px;
-      font-size: 1.5em;
-      font-weight: bold;
-      display: inline-block;
+        font-size: 1.2em;
     }
-
-    .profiles {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 10px;
-    }
-
-    .profile {
-      background-color: #79a9e0;
-      border: 2px solid black;
-      border-radius: 20px;
-      padding: 15px;
-      text-align: center;
-      font-size: 1em;
-    }
-
-    .profile h3 {
-      margin-top: 0;
-      font-family: "Georgia", serif;
-    }
-
-    ul {
-      text-align: left;
-      display: inline-block;
-      margin: 10px 0;
-      padding-left: 20px;
-    }
-
-    a {
-      color: darkblue;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+}
   </style>
 </head>
 <body>
