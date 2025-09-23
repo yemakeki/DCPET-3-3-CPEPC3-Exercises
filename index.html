@@ -1,13 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample</title>
+  <meta charset="UTF-8">
+  <title>Personal Profiles</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(to bottom, #66a3ff, #b3d9ff, #ffffff);
+      background-attachment: fixed;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    header h2 {
+      margin-top: 10px;
+      font-size: 1.5em;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .profiles {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 10px;
+    }
+
+    .profile {
+      background-color: #79a9e0;
+      border: 2px solid black;
+      border-radius: 20px;
+      padding: 15px;
+      text-align: center;
+      font-size: 1em;
+    }
+
+    .profile h3 {
+      margin-top: 0;
+      font-family: "Georgia", serif;
+    }
+  </style>
 </head>
 <body>
-    <h1>this is just a sampleee</h1>
-    <h2>this ain't the sample anymore!!!</h2>
-    <h3>last tryyyyy!</h3>
+  <header>
+    <h1>PERSONAL PROFILE PAGE</h1>
+    <h2>MEET THE GROUP 4</h2>
+  </header>
+
+  <div class="profiles">
+    <div class="profile">
+      <h3>Mariem Manato</h3>
+      <p>
+        Mariem is a creative thinker who enjoys exploring new ideas. 
+        She loves learning about design and applying her creativity in practical projects.
+      </p>
+    </div>
+    <div class="profile">
+      <h3>Audrey Nicole Mesa</h3>
+      <p>
+        Audrey is passionate about technology and web development. 
+        She enjoys solving problems through coding and constantly strives to improve her skills.
+      </p>
+    </div>
+    <div class="profile">
+      <h3>Airos Illustrisimo</h3>
+      <p>
+        Airos is an active learner who enjoys hands-on experiences. 
+        He is enthusiastic about science and how technology shapes the world.
+      </p>
+    </div>
+    <div class="profile">
+      <h3>Ian Paul Adviento</h3>
+      <p>
+        Ian is curious and enjoys discovering how things work. 
+        He spends time learning about different technologies and creative activities.
+      </p>
+    </div>
+  </div>
 </body>
 </html>
