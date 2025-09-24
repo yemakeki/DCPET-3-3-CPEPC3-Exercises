@@ -1,0 +1,118 @@
+body {
+  /* Online shopping themed background */
+  min-height: 100vh;
+  margin: 0;
+  /* Subtle shopping pattern with gradient and icons */
+  background: 
+    linear-gradient(135deg, #f5f6fa 60%, #e0e7ff 100%),
+    url('https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f6cd.png') 5% 10%/60px 60px no-repeat,
+    url('https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f6d2.png') 90% 80%/60px 60px no-repeat,
+    url('https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f381.png') 50% 50%/80px 80px no-repeat;
+  background-blend-mode: lighten;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.header {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 2rem 0 1.2rem 0;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+}
+
+.header-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #0078d4;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.header-subtitle {
+  color: #555;
+  font-size: 1.15rem;
+  margin: 0.5rem 0 0 0;
+  font-weight: 400;
+}
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Use 'center' for vertical centering */
+  width: 100%;
+  min-height: 60vh;
+  padding: 2rem 0 3rem 0;
+}
+
+.product-card {
+  max-width: 300px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 1.5rem;
+  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+}
+
+.product-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0,120,212,0.14);
+  border-color: #b3d6f7;
+  z-index: 2;
+}
+
+.product-media {
+  width: 100%;
+  display: block;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  height: 180px;
+  object-fit: cover;
+  background: #f0f4fa;
+}
+
+.product-title {
+  margin: 1.2rem 0 0.5rem 0;
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.product-desc {
+  margin: 0 1rem 1.5rem 1rem;
+  color: #555;
+  font-size: 1rem;
+  min-height: 48px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  background: linear-gradient(90deg, #0078d4 60%, #00b4d8 100%);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0,120,212,0.08);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  margin-top: auto;
+}
+
+.btn:hover,
+.btn:focus {
+  background: linear-gradient(90deg, #005fa3 60%, #0096c7 100%);
+  box-shadow: 0 4px 16px rgba(0,120,212,0.18);
+  transform: scale(1.05);
+}
