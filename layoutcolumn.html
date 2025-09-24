@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two-Column Layout</title>
+  <link rel="stylesheet" href="base.css">   
+  <link rel="stylesheet" href="layoutcolumn.css"> 
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <ul>
+        <li><button class="back-btn" onclick="showContent('front')">⬅ Back</button></li>
+        <li><a onclick="showContent('home')">🏠 Home</a></li>
+        <li><a href="index.html">👤 Personal Profile</a></li>
+        <li><a href="product.html">🛒 Product Card</a></li>
+      </ul>
+    </nav>
+
+    <!-- Content -->
+  <main class="content" id="mainContent">
+    <h1>Welcome!</h1>
+    <p>We’re glad to have you here. This site is a simple showcase of different web design layouts — from personal profile pages to styled product cards — all brought together in one place.</p>
+    <p>Use the navigation menu on the left to explore each section. Whether you’re browsing through profiles or checking out the product card, you’ll see how design and structure come together to create a clean and engaging experience.</p>
+  </main>
+  </div>
+
+  <script>
+    function showContent(section) {
+      const content = document.getElementById("mainContent");
+
+      if (section === "front") {
+        content.innerHTML = `
+          <h1>Welcome!</h1>
+          <p>We’re glad to have you here. This site is a simple showcase of different web design layouts — from personal profile pages to styled product cards — all brought together in one place.</p>
+          <p>Use the navigation menu on the left to explore each section. Whether you’re browsing through profiles or checking out the product card.</p>
+        `;
+      } else if (section === "home") {
+        content.innerHTML = `
+          <h1>Home</h1>
+          <p>Hello there! 👋 This is the home page. See that menu on the left side? That’s our special sidebar — it’s like a map that helps you move around this website.</p>
+          <p>Each button on the sidebar will take you to a different place: one shows a personal profile, another shows a product card, and of course you can always come back home. <br>
+            Try clicking them and see where they go, just like opening doors to different rooms!</p>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>

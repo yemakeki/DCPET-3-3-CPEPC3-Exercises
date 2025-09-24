@@ -1,0 +1,61 @@
+/* ---------- Two-Column Layout Page Styles ---------- */
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 15px;
+}
+
+.sidebar a,
+.back-btn {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: left;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.sidebar a:hover,
+.back-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* Content */
+.content {
+  flex: 1;
+  padding: 30px;
+}
+
+.content h1 {
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.content p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}

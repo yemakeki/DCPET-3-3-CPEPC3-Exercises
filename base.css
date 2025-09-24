@@ -1,0 +1,41 @@
+/* ---------- Base Styles (Shared by all pages) ---------- */
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body font */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 700;
+  color: #ffffff; /* unified heading color */
+}
+
+/* Links */
+a {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #1e90ff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #004080;
+  text-decoration: underline;
+}
+
+/* Responsive font scaling */
+@media screen and (max-width: 800px) {
+  h1 { font-size: 1.8em; }
+  h2 { font-size: 1.3em; }
+}
